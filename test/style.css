@@ -1,0 +1,202 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+html {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+q, blockquote {
+    quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none;
+}
+
+a img {
+    border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+.ly-wrapper {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.text {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+.face {
+    width: 100px;
+    height: 70px;
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+}
+
+.face.is-animation {
+    -webkit-animation: spin 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotateX(10deg) rotateY(0deg);
+    }
+    100% {
+        -webkit-transform: rotateX(10deg) rotateY(360deg);
+    }
+}
+.face__topOuter, .face__bottomOuter, .face__topInner, .face__bottomInner, .face__leftOuter, .face__rightOuter, .face__leftInner, .face__rightInner {
+    position: absolute;
+    list-style: none;
+    box-sizing: border-box;
+    background-color: rgba(0, 80, 155, 0.8);
+}
+
+.face__front, .face__back {
+    width: 100px;
+    height: 70px;
+    position: absolute;
+    list-style: none;
+    box-sizing: border-box;
+    border: 10px solid rgba(0, 80, 155, 0.8);
+}
+
+.face__topOuter, .face__bottomOuter {
+    width: 100px;
+    height: 10px;
+}
+
+.face__topInner, .face__bottomInner {
+    width: 80px;
+    height: 10px;
+}
+
+.face__leftOuter, .face__rightOuter {
+    width: 10px;
+    height: 70px;
+}
+
+.face__leftInner, .face__rightInner {
+    width: 10px;
+    height: 50px;
+}
+
+.face__front {
+    position: relative;
+    -webkit-transform: translateZ(-5px);
+}
+
+.face__back {
+    -webkit-transform: rotateY(180deg) translateY(-70px) translateZ(-5px);
+}
+
+.face__topOuter {
+    width: 100px;
+    height: 10px;
+    -webkit-transform: rotateX(-90deg) translateZ(-5px);
+}
+
+.face__bottomOuter {
+    -webkit-transform: rotateX(90deg) translateZ(-65px);
+}
+
+.face__topInner {
+    -webkit-transform: rotateX(-90deg) translateX(10px) translateZ(5px);
+}
+
+.face__bottomInner {
+    -webkit-transform: rotateX(90deg) translateX(10px) translateZ(-55px);
+}
+
+.face__leftOuter {
+    -webkit-transform: rotateY(90deg) translateZ(-5px);
+}
+
+.face__rightOuter {
+    width: 10px;
+    height: 70px;
+    -webkit-transform: rotateY(-90deg) translateZ(-95px);
+}
+
+.face__leftInner {
+    -webkit-transform: rotateY(90deg) translateY(10px) translateZ(5px);
+    background-color: rgba(0, 80, 155, 0.8);
+}
+
+.face__rightInner {
+    -webkit-transform: rotateY(-90deg) translateY(10px) translateZ(-85px);
+}
+
+.leftEye, .rightEye {
+    width: 14px;
+    height: 14px;
+    display: block;
+    background-color: #333;
+    position: absolute;
+    border-radius: 50%;
+    top: 18px;
+}
+
+.leftEye {
+    left: 10px;
+}
+
+.rightEye {
+    right: 10px;
+}
+
+.beak__back {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    border-width: 0 7px 18px 7px;
+    border-color: transparent transparent #f00 transparent;
+    border-style: solid;
+}
